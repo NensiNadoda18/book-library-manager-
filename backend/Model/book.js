@@ -6,5 +6,4 @@ const bookSchema=new mongoose.Schema({
     genre:{type:String},
     rating:{type:Number,require,min:[1,"Rating must be atleast 1"],max:[2,"Rating cannot be more than 5"]},
 })
-const book=mongoose.model('Book',bookSchema)
-module.exports=book
+module.exports=mongoose.model('Book',bookSchema)
